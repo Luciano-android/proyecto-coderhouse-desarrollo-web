@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.lista-ordenada-menu {
+    display: flex;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 15px;
+    font-size: 24px;
+    text-transform: none;
+}
+
+.fondo-secundario {
+    background-color: rgb(26, 235, 26);
+}
+
+.fondo-principal {
+    background-color: rgb(149, 247, 149);
+}
+
+.box-model-header {
+    width: 100%;
+    overflow: hidden;
+}
+
+.box-model-nav {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.box-model-footer {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-footer {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    text-transform: none;
+}
+
+h1 {
+    text-transform: capitalize;
+
+    text-align: center;
+}
+
+.lista-ordenada-menu li {
+    display: inline-block;
+    width: 10%;
+    position: relative;
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+}
+
+ul ul li {
+    display: block;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+.fieldset-1 {
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    border: 0;
+}
+
+
+.about-us-p {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 5px;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+#grid-principal {
+    display: grid;
+}
+
+.video-principal {
+    position: relative;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 540px) {
+    #grid-principal {
+        grid-template-columns: 100%;
+        grid-template-rows: 3vh 10vh 55vh 10vh;
+        grid-template-areas: "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    #grid-principal-products {
+        display: grid;
+        grid-template-columns: 12% 88%;
+        grid-template-rows: 3vh 10vh 80% 10vh;
+        column-gap: 10px;
+        grid-template-areas: "header header"
+            "nav nav"
+            "aside main"
+            "footer footer";
+    }
+
+    #menu-lateral {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        list-style: none;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .box-model-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    #grid-productos {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: space-evenly;
+        align-items: stretch;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #grid-principal {
+        grid-template-columns: 100%;
+        grid-template-rows: 3vh 10vh 30vh 10vh;
+        column-gap: 15px;
+        grid-template-areas: "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    #grid-principal-products {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 5vh 10vh 5vh auto 10vh;
+        column-gap: 10px;
+        grid-template-areas: "header"
+            "nav"
+            "aside"
+            "main"
+            "footer";
+    }
+
+    .lista-ordenada-menu {
+        justify-content: space-around;
+    }
+
+    #menu-lateral {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        list-style: none;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #grid-productos {
+        display: grid;
+        width: 100%;
+        overflow: auto;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: stretch;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
